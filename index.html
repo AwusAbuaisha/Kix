@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=, initial-scale=1.0">
+ <title>Kix</title>
+ <style>
+
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+  body{
+   background: #333;
+   font-family: Bebas Neue;
+   display: grid;
+   margin: 0;
+  }
+
+  @media only screen and (min-width: 640px) {
+   .grid-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-gap: 0;
+
+    /* grid-template-rows: auto auto auto auto; */
+    gap: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    margin: 0;
+    background: #444;
+    /* -ms-grid-row-align: center; */
+    
+   }
+
+   img{
+    width: 160px;
+    height: 110px;
+    margin: 0;
+    filter: drop-shadow(0px 0px 0px #999);
+    /* box-shadow: 0 0 40px white; */
+    transition: .25s ease-out;
+    transform: translateY(0px);
+   }
+
+   h1{
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    margin: 10px;
+    text-shadow: 5px 5px 0 #555;
+   }
+   h1 span{
+    font-size: 85px;
+    margin: 10px; 
+   }
+
+   .modals{
+    display: flex;
+    width: 100%;
+    height: 100%;
+   }
+
+   #modal1{
+    transition: .5s;
+    display: none; 
+    border: 10px solid #333;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+    background: #222;
+    outline: 4px solid white;
+   }
+
+   #modal1 img{
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    filter: drop-shadow(0px 0px 0px #999);
+    /* box-shadow: 0 0 40px white; */
+    transition: .25s ease-out;
+    transform: translateY(0px);
+   }
+   .PurchaseBtn1{
+    background: #333;
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 50px;
+    text-shadow: 5px 5px 0 #555;
+    margin: 10px;
+    transition: .25s;
+    border: 4px solid white;
+   }
+   .PurchaseBtn1:hover{
+    background: #222;
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 50px;
+    text-shadow: 5px 5px 0 #555;
+    border: 4px solid white;
+    box-shadow: 0 0 10px white;
+   }
+   .BackBtn1{
+    background: #333;
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 40px;
+    text-shadow: 5px 5px 0 #555;
+    margin: 10px;
+    transition: .25s;
+    border: 4px solid white;
+   }
+   .BackBtn1:hover{
+    background: #222;
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 50px;
+    text-shadow: 5px 5px 0 #555;
+    border: 4px solid white;
+    box-shadow: 0 0 10px white;
+   }
+   #modal1 img{
+    filter: drop-shadow(30px 20px 20px #000);
+   }
+   #modal1 h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+    text-shadow: 5px 5px 0 #555;
+   }
+   #modal1 h2{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+    text-shadow: 5px 5px 0 #555;
+   }
+   #modal h1 span{
+    font-size: 60px;
+    margin: 10px; 
+   }
+
+   h2{
+    margin: 0;
+   }
+
+   .grid-container div{
+    color: white;
+    font-size: 15px;
+    width: 250px;
+    height: 150px;
+    border: 4px solid white;
+    background: #222;
+    transition: .25s ease-out;
+    text-align: center;
+    /* margin-right: 20px; */
+    text-shadow: 0px 0px 0 #555;
+    /* box-shadow: 0 20px 60px black; */
+    margin: 0px;
+    padding: 0;
+    
+   }
+
+   .grid-container div:hover{
+    box-shadow: 0px 0px 10px white;
+    background: #111; 
+    cursor:pointer;
+    text-shadow: 5px 5px 0 #555;
+    
+   }
+
+   .grid-container div:active{
+    background: #111;
+    cursor: pointer;
+    text-shadow: 0px 0px 0 #555;
+   }
+
+   .grid-container div:hover > img{
+    filter: drop-shadow(0px 0px 10px #999);
+    filter: drop-shadow();
+    transform: translateY(-10px);
+   }
+
+   .grid-container div:active > img{
+    filter: drop-shadow(0px 0px 0px #999);
+    transform: translateY(0px);
+   }
+  }
+  
+  @media only screen and (max-width: 500px) {
+   .grid-container{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 0;
+
+      /* grid-template-rows: auto auto auto auto; */
+      gap: 10px;
+      border: 2px solid white;
+      padding: 10px;
+      margin: 0;
+      background: #444;
+      /* -ms-grid-row-align: center; */
+      
+     }
+
+     img{
+      width: 160px;
+      height: 110px;
+      margin: 0;
+      filter: drop-shadow(0px 0px 0px #999);
+      /* box-shadow: 0 0 40px white; */
+      transition: .25s ease-out;
+      transform: translateY(0px);
+     }
+
+     h1{
+      color: white;
+      text-align: center;
+      font-size: 60px;
+      margin: 10px;
+      text-shadow: 5px 5px 0 #555;
+     }
+     h1 span{
+      font-size: 85px;
+      margin: 10px; 
+     }
+
+     h2{
+      margin: 0;
+     }
+
+     .grid-container div{
+      color: white;
+      font-size: 15px;
+      width: 250px;
+      height: 150px;
+      border: 4px solid white;
+      background: #222;
+      transition: .25s ease-out;
+      text-align: center;
+      /* margin-right: 20px; */
+      text-shadow: 0px 0px 0 #555;
+      /* box-shadow: 0 20px 60px black; */
+      margin: 0px;
+      padding: 0;
+      
+     }
+
+     #modal1{
+      transition: .5s;
+      display: none; 
+      border: 10px solid #333;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      z-index: 1;
+      background: #222;
+      outline: 4px solid white;
+     }
+
+     #modal1 img{
+      width: 300px;
+      height: 200px;
+      margin: 0;
+      filter: drop-shadow(0px 0px 0px #999);
+      /* box-shadow: 0 0 40px white; */
+      transition: .25s ease-out;
+      transform: translateY(0px);
+     }
+     .PurchaseBtn1{
+      background: #333;
+      color: white;
+      font-family: Bebas Neue;
+      font-size: 30px;
+      text-shadow: 5px 5px 0 #555;
+      margin: 10px;
+      transition: .25s;
+      border: 4px solid white;
+     }
+     .PurchaseBtn1:hover{
+      background: #222;
+      color: white;
+      font-family: Bebas Neue;
+      text-shadow: 5px 5px 0 #555;
+      border: 4px solid white;
+      box-shadow: 0 0 10px white;
+     }
+     .BackBtn1{
+      background: #333;
+      color: white;
+      font-family: Bebas Neue;
+      font-size: 30px;
+      text-shadow: 5px 5px 0 #555;
+      margin: 10px;
+      transition: .25s;
+      border: 4px solid white;
+     }
+     .BackBtn1:hover{
+      background: #222;
+      color: white;
+      font-family: Bebas Neue;
+      text-shadow: 5px 5px 0 #555;
+      border: 4px solid white;
+      box-shadow: 0 0 10px white;
+     }
+     #modal1 img{
+      filter: drop-shadow(30px 20px 20px #000);
+     }
+     #modal1 h1{
+      color: white;
+      text-align: center;
+      font-size: 50px;
+      margin: 10px;
+      text-shadow: 5px 5px 0 #555;
+     }
+     #modal1 h2{
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      margin: 10px;
+      text-shadow: 5px 5px 0 #555;
+     }
+     #modal h1 span{
+      font-size: 60px;
+      margin: 10px; 
+     }
+
+     .grid-container div:hover{
+      box-shadow: 0px 0px 10px white;
+      background: #111; 
+      cursor:pointer;
+      text-shadow: 5px 5px 0 #555;
+      
+     }
+
+     .grid-container div:active{
+      background: #111;
+      cursor: pointer;
+      text-shadow: 0px 0px 0 #555;
+     }
+
+     .grid-container div:hover > img{
+      filter: drop-shadow(0px 0px 10px #999);
+      filter: drop-shadow();
+      transform: translateY(-10px);
+     }
+
+     .grid-container div:active > img{
+      filter: drop-shadow(0px 0px 0px #999);
+      transform: translateY(0px);
+     }
+   }
+
+ </style>
+</head>
+<body>
+ <!-- <hr> -->
+ <h1>J o r d a n <span>4</span> ' s</h1>
+ 
+
+ <div class="modals">
+  
+  <div id="modal1">
+   <h1>Jordan 4 Retro Motorsport</h1>
+   <img src="IMG/j4-1.png" alt="">
+   <h2>The Air Jordan 4 Retro Motorsports 2017 was inspired by <br> a friends and family colorway of 2006 made for the fourth anniversary of MJ's Motorsports Racing squad.</h2>
+   <button class="PurchaseBtn1">Purchase</button>
+   <button class="BackBtn1">Back</button>
+  </div>
+ </div>
+ 
+
+ <div class="grid-container">
+
+
+
+ </div>
+
+ <!-- <div class="bottom" style="color: white; position: absolute; bottom: 0;"><br><br><br><br><br><br><br><br>.ee<br><br><br><br><br><br><br><br><br>.</div> -->
+ <script src="main.js"></script>
+</body>
+</html>
