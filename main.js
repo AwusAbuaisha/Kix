@@ -46,6 +46,26 @@ products.push(
   "description":"The Air Jordan 4 “University Blue” is a brand new colorway of Michael Jordan's fourth signature shoe that released in 2021.",
   "image":"IMG/j4-3.png"
  },
+ {
+  "name": "Jordan 4 University Blue",
+  "description":"The Air Jordan 4 “University Blue” is a brand new colorway of Michael Jordan's fourth signature shoe that released in 2021.",
+  "image":"IMG/j4-3.png"
+ },
+ {
+  "name": "Jordan 4 'Cactus Jack'",
+  "description":"pays tribute to the city's bygone football team with a Durabuck leather upper dressed in University Blue and a Varsity Red insole.",
+  "image":"IMG/j4-4.png"
+ },
+ {
+  "name": "Jordan 4 'Alternate 89'",
+  "description":"The Air Jordan 4 Retro 'Alternate 89' features a design based on the Chicago Bulls' white and red home uniform.",
+  "image":"IMG/j4-5.png"
+ },
+ {
+  "name": "Jordan 4 Black Cat",
+  "description":"Offered in several colorways, the Jordan Black Cat sneaker was initially launched in Bred colorway. The Jordan Black Cat Bred has a Black and Red combination with hits of glow-in-the-dark green at the sole.",
+  "image":"IMG/j4-6.png"
+ },
 )
 for(let i = 0; i < products.length; i++){
  let pElement = document.createElement("div")
